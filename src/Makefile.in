@@ -535,9 +535,9 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bitcoinaddressvalidator.cpp \
 	qt/res/icons/tx_output.png qt/res/icons/tx_mined.png \
 	qt/res/icons/unit_HCASH.png qt/res/icons/unit_mHCASH.png \
 	qt/res/icons/unit_uHCASH.png qt/res/icons/unit_tHCASH.png \
-	qt/res/icons/unit_tmHCASH.png \
-	qt/res/icons/unit_tuHCASH.png qt/res/images/about.png \
-	qt/res/images/splash.png qt/res/images/splash_testnet.png \
+	qt/res/icons/unit_tmHCASH.png qt/res/icons/unit_tuHCASH.png \
+	qt/res/images/about.png qt/res/images/splash.png \
+	qt/res/images/splash_testnet.png \
 	qt/res/images/HCASH_logo_horizontal.png \
 	qt/res/images/downArrow.png qt/res/images/downArrow_small.png \
 	qt/res/images/upArrow_small.png \
@@ -763,8 +763,7 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 PROGRAMS = $(bin_PROGRAMS)
 am__HCASH_cli_SOURCES_DIST = HCASH-cli.cpp HCASH-cli-res.rc
 @TARGET_WINDOWS_TRUE@am__objects_10 = HCASH-cli-res.$(OBJEXT)
-am_HCASH_cli_OBJECTS = HCASH_cli-HCASH-cli.$(OBJEXT) \
-	$(am__objects_10)
+am_HCASH_cli_OBJECTS = HCASH_cli-HCASH-cli.$(OBJEXT) $(am__objects_10)
 HCASH_cli_OBJECTS = $(am_HCASH_cli_OBJECTS)
 HCASH_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(LIBBITCOIN_UTIL) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -799,9 +798,8 @@ HCASHd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 HCASHd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
 	$(CXXFLAGS) $(HCASHd_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_HCASH_qt_SOURCES_DIST = qt/HCASH.cpp \
-	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
-	qt/res/HCASH-qt-res.rc
+am__qt_HCASH_qt_SOURCES_DIST = qt/HCASH.cpp qt/macdockiconhandler.mm \
+	qt/macnotificationhandler.mm qt/res/HCASH-qt-res.rc
 @ENABLE_QT_TRUE@am__objects_12 =  \
 @ENABLE_QT_TRUE@	qt/qt_HCASH_qt-macdockiconhandler.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_HCASH_qt-macnotificationhandler.$(OBJEXT)
@@ -830,10 +828,9 @@ qt_HCASH_qt_OBJECTS = $(am_qt_HCASH_qt_OBJECTS)
 @ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 @ENABLE_QT_TRUE@	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
 @ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1)
-qt_HCASH_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
-	$(qt_HCASH_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
-	$(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
-	$(qt_HCASH_qt_LDFLAGS) $(LDFLAGS) -o $@
+qt_HCASH_qt_LINK = $(LIBTOOL) $(AM_V_lt) $(qt_HCASH_qt_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(OBJCXXLD) $(AM_OBJCXXFLAGS) \
+	$(OBJCXXFLAGS) $(qt_HCASH_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__qt_test_test_HCASH_qt_SOURCES_DIST = qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/uritests.h \
 	qt/test/paymentrequestdata.h qt/test/paymentservertests.h \
@@ -847,8 +844,7 @@ am__qt_test_test_HCASH_qt_SOURCES_DIST = qt/test/test_main.cpp \
 @ENABLE_QT_TESTS_TRUE@	$(am__objects_17)
 @ENABLE_QT_TESTS_TRUE@nodist_qt_test_test_HCASH_qt_OBJECTS =  \
 @ENABLE_QT_TESTS_TRUE@	$(am__objects_18)
-qt_test_test_HCASH_qt_OBJECTS =  \
-	$(am_qt_test_test_HCASH_qt_OBJECTS) \
+qt_test_test_HCASH_qt_OBJECTS = $(am_qt_test_test_HCASH_qt_OBJECTS) \
 	$(nodist_qt_test_test_HCASH_qt_OBJECTS)
 @ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_6 =  \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@	$(LIBBITCOIN_ZMQ) \
@@ -956,8 +952,7 @@ am__test_test_HCASH_SOURCES_DIST =  \
 @ENABLE_TESTS_TRUE@am_test_test_HCASH_OBJECTS = $(am__objects_20) \
 @ENABLE_TESTS_TRUE@	$(am__objects_1) $(am__objects_1)
 @ENABLE_TESTS_TRUE@am__objects_21 = $(am__objects_1) $(am__objects_1)
-@ENABLE_TESTS_TRUE@nodist_test_test_HCASH_OBJECTS =  \
-@ENABLE_TESTS_TRUE@	$(am__objects_21)
+@ENABLE_TESTS_TRUE@nodist_test_test_HCASH_OBJECTS = $(am__objects_21)
 test_test_HCASH_OBJECTS = $(am_test_test_HCASH_OBJECTS) \
 	$(nodist_test_test_HCASH_OBJECTS)
 @BUILD_BITCOIN_LIBS_TRUE@am__DEPENDENCIES_7 = libbitcoinconsensus.la
@@ -1059,11 +1054,10 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
 	$(univalue_libbitcoin_univalue_a_SOURCES) \
 	$(libbitcoinconsensus_la_SOURCES) $(HCASH_cli_SOURCES) \
-	$(HCASH_tx_SOURCES) $(HCASHd_SOURCES) \
-	$(qt_HCASH_qt_SOURCES) $(qt_test_test_HCASH_qt_SOURCES) \
+	$(HCASH_tx_SOURCES) $(HCASHd_SOURCES) $(qt_HCASH_qt_SOURCES) \
+	$(qt_test_test_HCASH_qt_SOURCES) \
 	$(nodist_qt_test_test_HCASH_qt_SOURCES) \
-	$(test_test_HCASH_SOURCES) \
-	$(nodist_test_test_HCASH_SOURCES)
+	$(test_test_HCASH_SOURCES) $(nodist_test_test_HCASH_SOURCES)
 DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_cli_a_SOURCES) $(libbitcoin_common_a_SOURCES) \
 	$(libbitcoin_server_a_SOURCES) \
@@ -2036,8 +2030,7 @@ EXTRA_DIST = leveldb $(am__append_18)
 @ENABLE_TESTS_TRUE@	test/serialize_tests.cpp \
 @ENABLE_TESTS_TRUE@	test/sighash_tests.cpp \
 @ENABLE_TESTS_TRUE@	test/sigopcount_tests.cpp \
-@ENABLE_TESTS_TRUE@	test/skiplist_tests.cpp \
-@ENABLE_TESTS_TRUE@	test/test_HCASH.cpp \
+@ENABLE_TESTS_TRUE@	test/skiplist_tests.cpp test/test_HCASH.cpp \
 @ENABLE_TESTS_TRUE@	test/timedata_tests.cpp \
 @ENABLE_TESTS_TRUE@	test/torcontrol_tests.cpp \
 @ENABLE_TESTS_TRUE@	test/transaction_tests.cpp \
@@ -2360,8 +2353,8 @@ EXTRA_DIST = leveldb $(am__append_18)
 @ENABLE_QT_TRUE@qt_HCASH_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
 @ENABLE_QT_TRUE@  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-@ENABLE_QT_TRUE@qt_HCASH_qt_SOURCES = qt/HCASH.cpp \
-@ENABLE_QT_TRUE@	$(am__append_26) $(am__append_27)
+@ENABLE_QT_TRUE@qt_HCASH_qt_SOURCES = qt/HCASH.cpp $(am__append_26) \
+@ENABLE_QT_TRUE@	$(am__append_27)
 @ENABLE_QT_TRUE@qt_HCASH_qt_LDADD = qt/libbitcoinqt.a \
 @ENABLE_QT_TRUE@	$(LIBBITCOIN_SERVER) $(am__append_28) \
 @ENABLE_QT_TRUE@	$(am__append_29) $(LIBBITCOIN_CLI) \
@@ -3061,16 +3054,16 @@ test/test_test_HCASH-tutorial_zerocoin.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-libzerocoin_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-allocator_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-allocator_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-checkblock_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-checkblock_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-Checkpoints_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
@@ -3107,22 +3100,22 @@ test/test_test_HCASH-script_P2SH_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-script_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-scriptnum_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-serialize_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-scriptnum_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-serialize_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-sigopcount_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-sigopcount_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-skiplist_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-test_HCASH.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-timedata_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-torcontrol_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-torcontrol_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-transaction_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
@@ -3131,12 +3124,12 @@ test/test_test_HCASH-univalue_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-util_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-accounting_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-accounting_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_HCASH-wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_HCASH-rpc_wallet_tests.$(OBJEXT):  \
-	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_HCASH-rpc_wallet_tests.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
 
 test/test_HCASH$(EXEEXT): $(test_test_HCASH_OBJECTS) $(test_test_HCASH_DEPENDENCIES) $(EXTRA_test_test_HCASH_DEPENDENCIES) test/$(am__dirstamp)
 	@rm -f test/test_HCASH$(EXEEXT)
