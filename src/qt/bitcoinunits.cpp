@@ -19,18 +19,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(GLPM);
-    unitlist.append(mGLPM);
-    unitlist.append(uGLPM);
+    unitlist.append(HCASH);
+    unitlist.append(mHCASH);
+    unitlist.append(uHCASH);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case GLPM:
-    case mGLPM:
-    case uGLPM:
+    case HCASH:
+    case mHCASH:
+    case uHCASH:
         return true;
     default:
         return false;
@@ -40,12 +40,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case GLPM:
-        return QString("GLPM");
-    case mGLPM:
-        return QString("mGLPM");
-    case uGLPM:
-        return QString::fromUtf8("uGLPM");
+    case HCASH:
+        return QString("HCASH");
+    case mHCASH:
+        return QString("mHCASH");
+    case uHCASH:
+        return QString::fromUtf8("uHCASH");
     default:
         return QString("???");
     }
@@ -55,23 +55,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case GLPM:
-            return QString("GLPM");
-        case mGLPM:
-            return QString("mGLPM");
-        case uGLPM:
-            return QString::fromUtf8("μGLPM");
+        case HCASH:
+            return QString("HCASH");
+        case mHCASH:
+            return QString("mHCASH");
+        case uHCASH:
+            return QString::fromUtf8("μHCASH");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case GLPM:
-            return QString("tGLPM");
-        case mGLPM:
-            return QString("mtGLPM");
-        case uGLPM:
-            return QString::fromUtf8("μtGLPM");
+        case HCASH:
+            return QString("tHCASH");
+        case mHCASH:
+            return QString("mtHCASH");
+        case uHCASH:
+            return QString::fromUtf8("μtHCASH");
         default:
             return QString("???");
         }
@@ -82,23 +82,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case GLPM:
-            return QString("GLPM");
-        case mGLPM:
-            return QString("Milli-GLPM (1 / 1" THIN_SP_UTF8 "000)");
-        case uGLPM:
-            return QString("Micro-GLPM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case HCASH:
+            return QString("HCASH");
+        case mHCASH:
+            return QString("Milli-HCASH (1 / 1" THIN_SP_UTF8 "000)");
+        case uHCASH:
+            return QString("Micro-HCASH (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case GLPM:
-            return QString("TestGLPMs");
-        case mGLPM:
-            return QString("Milli-TestGLPM (1 / 1" THIN_SP_UTF8 "000)");
-        case uGLPM:
-            return QString("Micro-TestGLPM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case HCASH:
+            return QString("TestHCASHs");
+        case mHCASH:
+            return QString("Milli-TestHCASH (1 / 1" THIN_SP_UTF8 "000)");
+        case uHCASH:
+            return QString("Micro-TestHCASH (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -108,11 +108,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case GLPM:
+    case HCASH:
         return 100000000;
-    case mGLPM:
+    case mHCASH:
         return 100000;
-    case uGLPM:
+    case uHCASH:
         return 100;
     default:
         return 100000000;
@@ -122,11 +122,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case GLPM:
+    case HCASH:
         return 8;
-    case mGLPM:
+    case mHCASH:
         return 5;
-    case uGLPM:
+    case uHCASH:
         return 2;
     default:
         return 0;

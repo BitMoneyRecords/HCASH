@@ -1,3 +1,3 @@
 Update coming soon!
-# GLPMCore
-# GLPMCoin
+# HCASHCore
+# HCASHCoin

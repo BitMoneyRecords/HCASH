@@ -1,5 +1,5 @@
 [Unit]
-Description=GLPM's distributed currency daemon
+Description=HCASH's distributed currency daemon
 After=network.target
 
 [Service]

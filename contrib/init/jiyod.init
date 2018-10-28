@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#  jiyod The GLPM core server.
+#  jiyod The HCASH core server.
 #
 #
 # chkconfig: 345 80 20

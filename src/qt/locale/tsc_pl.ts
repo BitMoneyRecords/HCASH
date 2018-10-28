@@ -148,8 +148,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GLPM&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE GLPM!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HCASH&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE HCASH!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,8 +227,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GLPM address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres GLPM jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this HCASH address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres HCASH jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,16 +518,16 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>GLPM Core</source>
-        <translation>&amp;Rdzeń GLPM</translation>
+        <source>HCASH Core</source>
+        <translation>&amp;Rdzeń HCASH</translation>
     </message>
     <message>
-        <source>Send coins to a GLPM address</source>
-        <translation>Wyślij monety do adresu GLPM</translation>
+        <source>Send coins to a HCASH address</source>
+        <translation>Wyślij monety do adresu HCASH</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and GLPM: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i GLPM:URI)</translation>
+        <source>Request payments (generates QR codes and HCASH: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i HCASH:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -538,24 +538,24 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About GLPM Core</source>
+        <source>&amp;About HCASH Core</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about GLPM Core</source>
+        <source>Show information about HCASH Core</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for GLPM</source>
-        <translation>Modyfikuj opcje konfiguracji GLPM</translation>
+        <source>Modify configuration options for HCASH</source>
+        <translation>Modyfikuj opcje konfiguracji HCASH</translation>
     </message>
     <message>
-        <source>Sign messages with your GLPM addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami GLPM, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your HCASH addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami HCASH, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GLPM addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu GLPM</translation>
+        <source>Verify messages to ensure they were signed with specified HCASH addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu HCASH</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -582,8 +582,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a GLPM: URI or payment request</source>
-        <translation>OtwórzGLPMX: URI i żądanie zapłaty</translation>
+        <source>Open a HCASH: URI or payment request</source>
+        <translation>OtwórzHCASHX: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -594,12 +594,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the GLPM Core help message to get a list with possible GLPM command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia GLPM, aby dostać listę możliwych opcji GLPM command-line</translation>
+        <source>Show the HCASH Core help message to get a list with possible HCASH command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia HCASH, aby dostać listę możliwych opcji HCASH command-line</translation>
     </message>
     <message>
-        <source>GLPM Core client</source>
-        <translation>Rdzeń GLPM klient</translation>
+        <source>HCASH Core client</source>
+        <translation>Rdzeń HCASH klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -912,8 +912,8 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>GLPM Core</source>
-        <translation>&amp;Rdzeń GLPM</translation>
+        <source>HCASH Core</source>
+        <translation>&amp;Rdzeń HCASH</translation>
     </message>
     </context>
 <context>
@@ -927,8 +927,8 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>GLPM Core</source>
-        <translation>&amp;Rdzeń GLPM</translation>
+        <source>HCASH Core</source>
+        <translation>&amp;Rdzeń HCASH</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1188,12 +1188,12 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start GLPM after logging in to the system.</source>
-        <translation>Automatycznie uruchom GLPM po zalogowaniu do systemu</translation>
+        <source>Automatically start HCASH after logging in to the system.</source>
+        <translation>Automatycznie uruchom HCASH po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start GLPM on system login</source>
-        <translation>&amp;Uruchom GLPM podczas logowania do systemu</translation>
+        <source>&amp;Start HCASH on system login</source>
+        <translation>&amp;Uruchom HCASH podczas logowania do systemu</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1212,18 +1212,18 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting GLPM.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie GLPM</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting HCASH.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie HCASH</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/GLPM-project/GLPM-project-translations</source>
+https://www.transifex.com/HCASH-project/HCASH-project-translations</source>
         <translation>Brakuje języka bądź nieukończona pełnego tłumaczenia? Pomóż w tłumaczeniu tutaj:
-https://www.transifex.com/GLPM-project/GLPM-project-translations </translation>
+https://www.transifex.com/HCASH-project/HCASH-project-translations </translation>
     </message>
     <message>
-        <source>Connect to the GLPM network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią GLPM poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the HCASH network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią HCASH poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1461,8 +1461,8 @@ https://www.transifex.com/GLPM-project/GLPM-project-translations </translation>
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a GLPM address (e.g. %1)</source>
-        <translation>Wprowadź adres GLPM (np. %1)</translation>
+        <source>Enter a HCASH address (e.g. %1)</source>
+        <translation>Wprowadź adres HCASH (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1900,8 +1900,8 @@ https://www.transifex.com/GLPM-project/GLPM-project-translations </translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GLPM address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres GLPM jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this HCASH address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres HCASH jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -1935,8 +1935,8 @@ https://www.transifex.com/GLPM-project/GLPM-project-translations </translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>GLPM Core</source>
-        <translation>&amp;Rdzeń GLPM</translation>
+        <source>HCASH Core</source>
+        <translation>&amp;Rdzeń HCASH</translation>
     </message>
     </context>
 <context>
@@ -2034,7 +2034,7 @@ https://www.transifex.com/GLPM-project/GLPM-project-translations </translation>
     </message>
     </context>
 <context>
-    <name>GLPM-core</name>
+    <name>HCASH-core</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>

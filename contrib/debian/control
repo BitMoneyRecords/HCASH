@@ -23,14 +23,14 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: http://www.jiyo.org
-Vcs-Git: git://github.com/jiyoproject/GLPM.git
-Vcs-Browser: http://github.com/jiyoproject/GLPM
+Vcs-Git: git://github.com/jiyoproject/HCASH.git
+Vcs-Browser: http://github.com/jiyoproject/HCASH
 
 Package: jiyod
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- GLPM is a free open source peer-to-peer electronic cash system that
+ HCASH is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -46,7 +46,7 @@ Package: jiyo-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- GLPM is a free open source peer-to-peer electronic cash system that
+ HCASH is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -55,4 +55,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides GLPM-Qt, a GUI for GLPM based on Qt.
+ This package provides HCASH-Qt, a GUI for HCASH based on Qt.

@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both GLPMd and GLPM-qt, to make it harder for attackers to
+ * for both HCASHd and HCASH-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("GLPM Core");
+const std::string CLIENT_NAME("HCASH Core");
 
 /**
  * Client version number

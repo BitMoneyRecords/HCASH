@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=GLPM
-Comment=GLPM P2P Cryptocurrency
-Comment[fr]=GLPM, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=GLPM, eşten eşe kriptografik sanal para birimi
+Name=HCASH
+Comment=HCASH P2P Cryptocurrency
+Comment[fr]=HCASH, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=HCASH, eşten eşe kriptografik sanal para birimi
 Exec=jiyo-qt %u
 Terminal=false
 Type=Application

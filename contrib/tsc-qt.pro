@@ -78,7 +78,7 @@ HEADERS += src/activemasternode.h \
            src/crypter.h \
            src/obfuscation-relay.h \
            src/obfuscation.h \
-           src/GLPM-config.h \
+           src/HCASH-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/activemasternode.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/GLPM-config.h \
+           src/config/HCASH-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -333,7 +333,7 @@ HEADERS += src/activemasternode.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/GLPM.moc \
+           src/qt/HCASH.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -374,9 +374,9 @@ SOURCES += src/activemasternode.cpp \
            src/crypter.cpp \
            src/obfuscation-relay.cpp \
            src/obfuscation.cpp \
-           src/GLPM-cli.cpp \
-           src/GLPM-tx.cpp \
-           src/GLPM.cpp \
+           src/HCASH-cli.cpp \
+           src/HCASH-tx.cpp \
+           src/HCASH.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -471,8 +471,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/obfuscationconfig.cpp \
-           src/qt/GLPM.cpp \
-           src/qt/GLPMstrings.cpp \
+           src/qt/HCASH.cpp \
+           src/qt/HCASHstrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -550,7 +550,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_GLPM.cpp \
+           src/test/test_HCASH.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -641,21 +641,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/GLPM.qrc src/qt/GLPM_locale.qrc
+RESOURCES += src/qt/HCASH.qrc src/qt/HCASH_locale.qrc
 
-TRANSLATIONS += src/qt/locale/GLPM_bg.ts \
-                src/qt/locale/GLPM_de.ts \
-                src/qt/locale/GLPM_en.ts \
-                src/qt/locale/GLPM_es.ts \
-                src/qt/locale/GLPM_fi.ts \
-                src/qt/locale/GLPM_fr.ts \
-                src/qt/locale/GLPM_it.ts \
-                src/qt/locale/GLPM_ja.ts \
-                src/qt/locale/GLPM_pl.ts \
-                src/qt/locale/GLPM_pt.ts \
-                src/qt/locale/GLPM_ru.ts \
-                src/qt/locale/GLPM_sk.ts \
-                src/qt/locale/GLPM_sv.ts \
-                src/qt/locale/GLPM_vi.ts \
-                src/qt/locale/GLPM_zh_CN.ts \
-                src/qt/locale/GLPM_zh_TW.ts
+TRANSLATIONS += src/qt/locale/HCASH_bg.ts \
+                src/qt/locale/HCASH_de.ts \
+                src/qt/locale/HCASH_en.ts \
+                src/qt/locale/HCASH_es.ts \
+                src/qt/locale/HCASH_fi.ts \
+                src/qt/locale/HCASH_fr.ts \
+                src/qt/locale/HCASH_it.ts \
+                src/qt/locale/HCASH_ja.ts \
+                src/qt/locale/HCASH_pl.ts \
+                src/qt/locale/HCASH_pt.ts \
+                src/qt/locale/HCASH_ru.ts \
+                src/qt/locale/HCASH_sk.ts \
+                src/qt/locale/HCASH_sv.ts \
+                src/qt/locale/HCASH_vi.ts \
+                src/qt/locale/HCASH_zh_CN.ts \
+                src/qt/locale/HCASH_zh_TW.ts

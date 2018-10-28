@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The GLPM developers
+// Copyright (c) 2018 The HCASH developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -238,10 +238,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop GLPM server.");
+            "\nStop HCASH server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "GLPM server stopping";
+    return "HCASH server stopping";
 }
 
 
@@ -319,36 +319,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* GLPM features */
-        {"GLPM", "masternode", &masternode, true, true, false},
-        {"GLPM", "listmasternodes", &listmasternodes, true, true, false},
-        {"GLPM", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"GLPM", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"GLPM", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"GLPM", "masternodedebug", &masternodedebug, true, true, false},
-        {"GLPM", "startmasternode", &startmasternode, true, true, false},
-        {"GLPM", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"GLPM", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"GLPM", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"GLPM", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"GLPM", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"GLPM", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"GLPM", "mnbudget", &mnbudget, true, true, false},
-        {"GLPM", "preparebudget", &preparebudget, true, true, false},
-        {"GLPM", "submitbudget", &submitbudget, true, true, false},
-        {"GLPM", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"GLPM", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"GLPM", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"GLPM", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"GLPM", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"GLPM", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"GLPM", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"GLPM", "checkbudgets", &checkbudgets, true, true, false},
-        {"GLPM", "mnsync", &mnsync, true, true, false},
-        {"GLPM", "spork", &spork, true, true, false},
-        {"GLPM", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* HCASH features */
+        {"HCASH", "masternode", &masternode, true, true, false},
+        {"HCASH", "listmasternodes", &listmasternodes, true, true, false},
+        {"HCASH", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"HCASH", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"HCASH", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"HCASH", "masternodedebug", &masternodedebug, true, true, false},
+        {"HCASH", "startmasternode", &startmasternode, true, true, false},
+        {"HCASH", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"HCASH", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"HCASH", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"HCASH", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"HCASH", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"HCASH", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"HCASH", "mnbudget", &mnbudget, true, true, false},
+        {"HCASH", "preparebudget", &preparebudget, true, true, false},
+        {"HCASH", "submitbudget", &submitbudget, true, true, false},
+        {"HCASH", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"HCASH", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"HCASH", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"HCASH", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"HCASH", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"HCASH", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"HCASH", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"HCASH", "checkbudgets", &checkbudgets, true, true, false},
+        {"HCASH", "mnsync", &mnsync, true, true, false},
+        {"HCASH", "spork", &spork, true, true, false},
+        {"HCASH", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"GLPM", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"HCASH", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -627,16 +627,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use GLPMd, or the -server option to GLPM-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use HCASHd, or the -server option to HCASH-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=GLPMrpc\n"
+                                               "rpcuser=HCASHrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"GLPM Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"HCASH Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1087,7 +1087,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> GLPM-cli " + methodname + " " + args + "\n";
+    return "> HCASH-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

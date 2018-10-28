@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "GLPM"
-            VALUE "FileDescription",    "GLPM Core - GUI"
+            VALUE "CompanyName",        "HCASH"
+            VALUE "FileDescription",    "HCASH Core - GUI"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "GLPM-qt"
+            VALUE "InternalName",       "HCASH-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "GLPM-qt.exe"
-            VALUE "ProductName",        "GLPM Core"
+            VALUE "OriginalFilename",   "HCASH-qt.exe"
+            VALUE "ProductName",        "HCASH Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

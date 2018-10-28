@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between GLPM-cli and GLPMd)
- * of a given instance of the GLPM system.
+ * CBaseChainParams defines the base parameters (shared between HCASH-cli and HCASHd)
+ * of a given instance of the HCASH system.
  */
 class CBaseChainParams
 {

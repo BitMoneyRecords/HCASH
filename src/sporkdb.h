@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef GLPM_CSPORKDB_H
-#define GLPM_CSPORKDB_H
+#ifndef HCASH_CSPORKDB_H
+#define HCASH_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //GLPM_CSPORKDB_H
+#endif //HCASH_CSPORKDB_H

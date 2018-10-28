@@ -346,7 +346,7 @@ void AddressTableModel::updateEntry(const QString& address,
     const QString& purpose,
     int status)
 {
-    // Update address book model from GLPM core
+    // Update address book model from HCASH core
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

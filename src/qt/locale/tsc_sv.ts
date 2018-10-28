@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your GLPM addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina GLPM adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your HCASH addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina HCASH adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your GLPM addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina GLPM adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your HCASH addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina HCASH adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,16 +160,16 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>GLPM will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your GLPMs from being stolen by malware infecting your computer.</source>
-        <translation>GLPM kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina GLPMs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>HCASH will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HCASHs from being stolen by malware infecting your computer.</source>
+        <translation>HCASH kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina HCASHs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Är du säker på att du vill kryptera din plånbok?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR GLPM&lt;/b&gt;!</source>
-        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA GLPM&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HCASH&lt;/b&gt;!</source>
+        <translation>Varning: om du krypterar din plånbok och tappar bort din lösenfras kommer du &lt;b&gt; FÖRLORA ALLA DINA HCASH&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -223,8 +223,8 @@
         <translation>BIP 38 Kryptering</translation>
     </message>
     <message>
-        <source>Enter a GLPM Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Ange en GLPM adress som du vill kryptera med BIP 38.
+        <source>Enter a HCASH Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Ange en HCASH adress som du vill kryptera med BIP 38.
 Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den krypterade privata nyckeln.</translation>
     </message>
     <message>
@@ -232,8 +232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The GLPM address to sign the message with</source>
-        <translation>GLPM adressen för signera meddelandet med</translation>
+        <source>The HCASH address to sign the message with</source>
+        <translation>HCASH adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GLPM address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna GLPM adress</translation>
+        <source>Sign the message to prove you own this HCASH address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna HCASH adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ange BIP 38 krypterade privata nyckeln. Ange lösenfrasen i med mittersta boxen. Tryck på krypetra nyckel för att beräkna den privata nyckeln. Efter att nyckeln är avkrypterad, Tryck på 'Importera Adress' kommer att lägga till denna privata nyckel till plånboken.</translation>
     </message>
     <message>
-        <source>The GLPM address the message was signed with</source>
-        <translation>GLPM adressen meddelandet blev signerat med</translation>
+        <source>The HCASH address the message was signed with</source>
+        <translation>HCASH adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GLPM address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GLPM adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified HCASH address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika HCASH adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -583,16 +583,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>GLPM Core</source>
-        <translation>GLPM Kärna</translation>
+        <source>HCASH Core</source>
+        <translation>HCASH Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a GLPM address</source>
-        <translation>Skicka mynt till en GLPM adress</translation>
+        <source>Send coins to a HCASH address</source>
+        <translation>Skicka mynt till en HCASH adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and GLPM: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och GLPM: URls)</translation>
+        <source>Request payments (generates QR codes and HCASH: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och HCASH: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -603,24 +603,24 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About GLPM Core</source>
-        <translation>Om GLPM Kärnan</translation>
+        <source>&amp;About HCASH Core</source>
+        <translation>Om HCASH Kärnan</translation>
     </message>
     <message>
-        <source>Show information about GLPM Core</source>
-        <translation>Visa information om GLPM Kärnan</translation>
+        <source>Show information about HCASH Core</source>
+        <translation>Visa information om HCASH Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for GLPM</source>
-        <translation>Ändra konfigurationsval för GLPM</translation>
+        <source>Modify configuration options for HCASH</source>
+        <translation>Ändra konfigurationsval för HCASH</translation>
     </message>
     <message>
-        <source>Sign messages with your GLPM addresses to prove you own them</source>
-        <translation>Signera meddelanden med din GLPM adress för att visa att du äger dem</translation>
+        <source>Sign messages with your HCASH addresses to prove you own them</source>
+        <translation>Signera meddelanden med din HCASH adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified GLPM addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GLPM adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified HCASH addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika HCASH adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -631,8 +631,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>GLPM Core client</source>
-        <translation>GLPM kärn klient</translation>
+        <source>HCASH Core client</source>
+        <translation>HCASH kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -837,15 +837,15 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>GLPM Core</source>
-        <translation>GLPM Kärna</translation>
+        <source>HCASH Core</source>
+        <translation>HCASH Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>GLPM Core</source>
-        <translation>GLPM Kärna</translation>
+        <source>HCASH Core</source>
+        <translation>HCASH Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1157,8 +1157,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The GLPM address to sign the message with</source>
-        <translation>GLPM adressen för signera meddelandet med</translation>
+        <source>The HCASH address to sign the message with</source>
+        <translation>HCASH adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1181,16 +1181,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this GLPM address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna GLPM adress</translation>
+        <source>Sign the message to prove you own this HCASH address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna HCASH adress</translation>
     </message>
     <message>
-        <source>The GLPM address the message was signed with</source>
-        <translation>GLPM adressen meddelandet blev signerat med</translation>
+        <source>The HCASH address the message was signed with</source>
+        <translation>HCASH adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified GLPM address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika GLPM adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified HCASH address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika HCASH adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1232,8 +1232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>GLPM Core</source>
-        <translation>GLPM Kärna</translation>
+        <source>HCASH Core</source>
+        <translation>HCASH Kärna</translation>
     </message>
     </context>
 <context>
@@ -1419,7 +1419,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>GLPM-core</name>
+    <name>HCASH-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>
