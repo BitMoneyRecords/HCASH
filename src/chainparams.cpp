@@ -54,7 +54,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("00001d0cccd92bfbb06837481479b5307ec987898ff34780f2798af314010760"));
+    (0, uint256("00003209ab65c9ecfdf07de4c3e64dd6b5d3863af89b1efdb5ff1570b0e4fe8c"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1538622924, // * UNIX timestamp of last checkpoint block
@@ -106,7 +106,7 @@ public:
         pchMessageStart[3] = 0x67;
         vAlertPubKey = ParseHex("04c32c8ab64b43228550115a862847deb294b776a71d6395e9c49477d13eac413f022e40462770dbc665f8a32aeec2a5d87839239f9a0b91a85269f90e79ab0ccc");
         nDefaultPort = 37888;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // HCASH starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 1; // HCASH starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 2100000000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
@@ -115,9 +115,9 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // HCASH: 1 day
         nTargetSpacing = 1 * 60; //HCASH: 1 minute
-        nMaturity = 15;
+        nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 18000000000* COIN; //500,000,000
+        nMaxMoneyOut = 20000000* COIN; //500,000,000
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 500;
@@ -153,7 +153,7 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1538622924;  // Thursday, Saturday, May 5, 2018 8:17:00 PM GNT
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21500;
+        genesis.nNonce = 114763;
 /*
         printf("Generating genesis block...\n");
 
@@ -179,16 +179,16 @@ public:
         printf("genesis: %s\n",hashGenesisBlock.GetHex().c_str());
         printf("merklehash: %s\n",genesis.hashMerkleRoot.ToString().c_str());				*/
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00001d0cccd92bfbb06837481479b5307ec987898ff34780f2798af314010760"));
-        assert(genesis.hashMerkleRoot == uint256("4d11e2104650810dcfd5ad2518c523beb4aa1f91268efe3b0a86051cd919d351"));
+        assert(hashGenesisBlock == uint256("00003209ab65c9ecfdf07de4c3e64dd6b5d3863af89b1efdb5ff1570b0e4fe8c"));
+        assert(genesis.hashMerkleRoot == uint256("2ea9f1d25cfe4495f94bd257cef2cd2d34879e8fc2ee415aba5c7daf7a92f0af"));
 
-       vSeeds.push_back(CDNSSeedData("45.77.137.45", "45.77.137.45"));
-       vSeeds.push_back(CDNSSeedData("80.240.31.36", "80.240.31.36"));
-       vSeeds.push_back(CDNSSeedData("217.69.15.18", "217.69.15.18"));
+//       vSeeds.push_back(CDNSSeedData("45.77.137.45", "45.77.137.45"));
+  //     vSeeds.push_back(CDNSSeedData("80.240.31.36", "80.240.31.36"));
+    //   vSeeds.push_back(CDNSSeedData("217.69.15.18", "217.69.15.18"));
                 
-		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65);
+		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40);
 		base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);
-		base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 65+128);
+		base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 40+128);
 		base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
 		base58Prefixes[EXT_SECRET_KEY] = list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md

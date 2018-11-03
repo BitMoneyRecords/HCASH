@@ -1,1 +1,1 @@
-# dummy
+qt/qt_libbitcoinqt_a-qrc_HCASH.o: qt/qrc_HCASH.cpp
