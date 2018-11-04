@@ -430,7 +430,7 @@ boost::filesystem::path GetDefaultDataDir()
 // Unix: ~/.HCASH
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "HCASH2";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "HCASH";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -442,10 +442,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "HCASH2";
+    return pathRet / "HCASH";
 #else
     // Unix
-    return pathRet / ".HCASH2";
+    return pathRet / ".HCASH";
 #endif
 #endif
 }
@@ -492,7 +492,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "HCASH2.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "HCASH.conf"));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
