@@ -105,7 +105,7 @@ public:
         pchMessageStart[2] = 0x58;
         pchMessageStart[3] = 0x67;
         vAlertPubKey = ParseHex("04c32c8ab64b43228550115a862847deb294b776a71d6395e9c49477d13eac413f022e40462770dbc665f8a32aeec2a5d87839239f9a0b91a85269f90e79ab0ccc");
-        nDefaultPort = 37888;
+        nDefaultPort = 32888;
         bnProofOfWorkLimit = ~uint256(0) >> 1; // HCASH starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 2100000000;
         nMaxReorganizationDepth = 100;
@@ -182,9 +182,9 @@ public:
         assert(hashGenesisBlock == uint256("00003209ab65c9ecfdf07de4c3e64dd6b5d3863af89b1efdb5ff1570b0e4fe8c"));
         assert(genesis.hashMerkleRoot == uint256("2ea9f1d25cfe4495f94bd257cef2cd2d34879e8fc2ee415aba5c7daf7a92f0af"));
 
-//       vSeeds.push_back(CDNSSeedData("45.77.137.45", "45.77.137.45"));
-  //     vSeeds.push_back(CDNSSeedData("80.240.31.36", "80.240.31.36"));
-    //   vSeeds.push_back(CDNSSeedData("217.69.15.18", "217.69.15.18"));
+       vSeeds.push_back(CDNSSeedData("212.86.108.214", "212.86.108.214"));
+      vSeeds.push_back(CDNSSeedData("212.86.102.155", "212.86.102.155"));
+       vSeeds.push_back(CDNSSeedData("212.86.102.159", "212.86.102.159"));
                 
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40);
 		base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);

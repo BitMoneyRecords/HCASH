@@ -182,7 +182,8 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork)
     std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) + boost::lexical_cast<std::string>(spork.nTimeSigned);
 
 //    string strSporkKey = "04fc640bba80713c0666acda4d3ffce670307a55f90b703995c830a1e9110b07244508724b7106395f8336c78d3691ae5ba05abe3840f3a7e18d6b95acdd0de71d";
-    string strSporkKey = "03cd5a1f239cb0b01984b51c18d3e11da9449fefae1c310e02be228e2bfcf178de";
+   // string strSporkKey = "03cd5a1f239cb0b01984b51c18d3e11da9449fefae1c310e02be228e2bfcf178de";
+string strSporkKey = "03d14263a5419f582f9cd43f51d60004575c8783a5964a5e443de39f2f5750e073"; 
     //CPubKey pubkeynew(ParseHex(Params().SporkKey()));
     CPubKey pubkeynew(ParseHex(strSporkKey));
     //cout << "CheckSignature: " << pubkeynew.GetHex() << "\n";
