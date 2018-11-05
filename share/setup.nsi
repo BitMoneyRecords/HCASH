@@ -1,4 +1,4 @@
-Name "HCASH Core (32-bit)"
+Name "HCASH Core (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -20,7 +20,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "HCASH Core"
-!define MUI_FINISHPAGE_RUN $INSTDIR\HCASH-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\HCASH-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/acedcoin/buu/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -28,7 +28,7 @@ SetCompressor /SOLID lzma
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "32" == "64"
+!if "" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/acedcoin/buu/HCASH-${VERSION}-win32-setup.exe
-!if "32" == "64"
+OutFile /home/acedcoin/buu/HCASH-${VERSION}-win-setup.exe
+!if "" == "64"
 InstallDir $PROGRAMFILES64\HCASH
 !else
 InstallDir $PROGRAMFILES\HCASH
@@ -73,12 +73,12 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/acedcoin/buu/release/HCASH-qt.exe
+    File /home/acedcoin/buu/release/HCASH-qt
     File /oname=COPYING.txt /home/acedcoin/buu/COPYING
     File /oname=readme.txt /home/acedcoin/buu/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/acedcoin/buu/release/HCASHd.exe
-    File /home/acedcoin/buu/release/HCASH-cli.exe
+    File /home/acedcoin/buu/release/HCASHd
+    File /home/acedcoin/buu/release/HCASH-cli
     SetOutPath $INSTDIR\doc
     File /r /home/acedcoin/buu/doc\*.*
     SetOutPath $INSTDIR
@@ -91,8 +91,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\HCASH-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\HCASH Core (testnet, 32-bit).lnk" "$INSTDIR\HCASH-qt.exe" "-testnet" "$INSTDIR\HCASH-qt.exe" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\HCASH-qt
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\HCASH Core (testnet, -bit).lnk" "$INSTDIR\HCASH-qt" "-testnet" "$INSTDIR\HCASH-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -105,8 +105,8 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "HCASH" "URL Protocol" ""
     WriteRegStr HKCR "HCASH" "" "URL:HCASH"
-    WriteRegStr HKCR "HCASH\DefaultIcon" "" $INSTDIR\HCASH-qt.exe
-    WriteRegStr HKCR "HCASH\shell\open\command" "" '"$INSTDIR\HCASH-qt.exe" "%1"'
+    WriteRegStr HKCR "HCASH\DefaultIcon" "" $INSTDIR\HCASH-qt
+    WriteRegStr HKCR "HCASH\shell\open\command" "" '"$INSTDIR\HCASH-qt" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -124,7 +124,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\HCASH-qt.exe
+    Delete /REBOOTOK $INSTDIR\HCASH-qt
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\HCASH Core (testnet, 32-bit).lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\HCASH Core (testnet, -bit).lnk"
     Delete /REBOOTOK "$SMSTARTUP\HCASH.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
@@ -158,7 +158,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "32" == "64"
+!if "" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64

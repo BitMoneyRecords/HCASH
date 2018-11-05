@@ -2132,11 +2132,14 @@ int64_t GetBlockValue(int nHeight)
     //    if (nHeight < 200 && nHeight > 0)
       //      return 10000 * COIN;
    // }
-
+    if (nHeight == 42) { //answer to life
+	return 100000 * COIN;
+}
     if (nHeight == 0) {
         nSubsidy = 1 * COIN;  //genesis
     } else if(nHeight == 1 ){
         nSubsidy = 1000000 * COIN;  //1,500,000
+/*
     } else if(nHeight > 1 && nHeight <= 1025280) {
 		nSubsidy = 5.7 * COIN;
 	} else if(nHeight <= 2050560) { //PoS phase
@@ -2144,7 +2147,19 @@ int64_t GetBlockValue(int nHeight)
     } else if(nHeight <= 3075840 ) {
 		nSubsidy = 0.95 * COIN;
     } else if(nHeight <= 5126400 ) { 
-		nSubsidy = 0.47 * COIN;
+		nSubsidy = 0.47 * COIN;*/
+    } else if(nHeight > 1 && nHeight <= 33) {
+                nSubsidy = 5.7 * COIN;
+        } else if (nHeight <= 86400) {
+                nSubsidy = 23.14 * COIN;
+        } else if (nHeight <= 525600) {
+                nSubsidy = 4.55 * COIN;
+        } else if(nHeight <= 2102400) { //PoS phase
+                nSubsidy = 3.8 * COIN; // "instamine"
+    } else if(nHeight <= 3153600) {
+                nSubsidy = 0.95 * COIN;
+ } else if (nHeight <= 5256000 ) {
+		nSubsidy = .48 * COIN;
 //    } else if(nHeight <= 1300000 ) { 
 //		nSubsidy = 6000 * COIN;
   //  } else if(nHeight <= 1560000 ) { 
@@ -2165,7 +2180,9 @@ int64_t GetBlockValue(int nHeight)
    if(((nHeight) % 100 == 0) && nHeight > 5) {
 	  nSubsidy = ((nSubsidy*.1)*100) + (nSubsidy * .3);
 } else {
+//if(chainActive.Height() > 10) {
 	nSubsidy *= .9;
+//}
 }
     return nSubsidy;
 }
@@ -2182,6 +2199,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 	// 80% for Masternodes
 //	if (nHeight <= 1500) {
 //	      ret = blockValue *.000001;
+	if (nHeight == 42) {
+return 0.0000001 * COIN;
+}
     if ((nHeight) % 100 == 0 && nHeight > 3){
 	return blockValue * 0.970873;
 	}
