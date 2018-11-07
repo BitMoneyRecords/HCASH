@@ -89,7 +89,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+host_triplet = i686-w64-mingw32
 am__append_1 = -I$(srcdir)/leveldb/include \
 	-I$(srcdir)/leveldb/helpers/memenv
 am__append_2 = $(builddir)/leveldb/libleveldb.a
@@ -107,8 +107,8 @@ am__append_8 = HCASH-cli HCASH-tx
 #am__append_10 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_11 = libbitcoin_wallet.a
 #
-#am__append_12 = HCASHd-res.rc
-#am__append_13 = HCASH-cli-res.rc
+am__append_12 = HCASHd-res.rc
+am__append_13 = HCASH-cli-res.rc
 ##am__append_14 = compat/glibc_compat.cpp \
 ##	compat/glibcxx_compat.cpp
 ##am__append_15 = secp256k1/libsecp256k1.la
@@ -174,7 +174,7 @@ am__append_25 = \
   qt/zHCASHcontroldialog.cpp
 
 #am__append_26 = $(BITCOIN_MM)
-#am__append_27 = $(BITCOIN_RC)
+am__append_27 = $(BITCOIN_RC)
 am__append_28 = $(LIBBITCOIN_WALLET)
 #am__append_29 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_30 = $(CLEAN_QT)
@@ -762,7 +762,7 @@ am__EXEEXT_4 = qt/HCASH-qt$(EXEEXT)
 #am__EXEEXT_5 = qt/test/test_HCASH-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
 am__HCASH_cli_SOURCES_DIST = HCASH-cli.cpp HCASH-cli-res.rc
-#am__objects_10 = HCASH-cli-res.$(OBJEXT)
+am__objects_10 = HCASH-cli-res.$(OBJEXT)
 am_HCASH_cli_OBJECTS = HCASH_cli-HCASH-cli.$(OBJEXT) $(am__objects_10)
 HCASH_cli_OBJECTS = $(am_HCASH_cli_OBJECTS)
 HCASH_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(LIBBITCOIN_UTIL) \
@@ -780,7 +780,7 @@ HCASH_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
 	$(CXXFLAGS) $(HCASH_tx_LDFLAGS) $(LDFLAGS) -o $@
 am__HCASHd_SOURCES_DIST = HCASHd.cpp HCASHd-res.rc
-#am__objects_11 = HCASHd-res.$(OBJEXT)
+am__objects_11 = HCASHd-res.$(OBJEXT)
 am_HCASHd_OBJECTS = HCASHd-HCASHd.$(OBJEXT) $(am__objects_11)
 HCASHd_OBJECTS = $(am_HCASHd_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_2)
@@ -806,8 +806,8 @@ am__objects_12 =  \
 #am__objects_13 =  \
 #	$(am__objects_12)
 am__objects_14 = qt/res/HCASH-qt-res.$(OBJEXT)
-#am__objects_15 =  \
-#	$(am__objects_14)
+am__objects_15 =  \
+	$(am__objects_14)
 am_qt_HCASH_qt_OBJECTS =  \
 	qt/qt_HCASH_qt-HCASH.$(OBJEXT) \
 	$(am__objects_13) $(am__objects_15)
@@ -1273,7 +1273,7 @@ RECHECK_LOGS = $(TEST_LOGS)
 #am__EXEEXT_6 = test/test_HCASH$(EXEEXT) \
 #	test/bitcoin-util-test.py
 TEST_SUITE_LOG = test-suite.log
-TEST_EXTENSIONS =  .test
+TEST_EXTENSIONS = .exe .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 LOG_COMPILE = $(LOG_COMPILER) $(AM_LOG_FLAGS) $(LOG_FLAGS)
 am__set_b = \
@@ -1287,7 +1287,7 @@ am__set_b = \
       b='$*';; \
   esac
 am__test_logs1 = $(TESTS:=.log)
-am__test_logs2 = $(am__test_logs1:.log=.log)
+am__test_logs2 = $(am__test_logs1:.exe.log=.log)
 TEST_LOGS = $(am__test_logs2:.test.log=.log)
 TEST_LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 TEST_LOG_COMPILE = $(TEST_LOG_COMPILER) $(AM_TEST_LOG_FLAGS) \
@@ -1326,7 +1326,7 @@ am__relativize = \
 ACLOCAL = ${SHELL} /home/acedcoin/buu/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = ar
+AR = /usr/bin/i686-w64-mingw32-ar
 AUTOCONF = ${SHELL} /home/acedcoin/buu/build-aux/missing autoconf
 AUTOHEADER = ${SHELL} /home/acedcoin/buu/build-aux/missing autoheader
 AUTOMAKE = ${SHELL} /home/acedcoin/buu/build-aux/missing automake-1.15
@@ -1337,21 +1337,21 @@ BITCOIN_CLI_NAME = HCASH-cli
 BITCOIN_DAEMON_NAME = HCASHd
 BITCOIN_GUI_NAME = HCASH-qt
 BITCOIN_TX_NAME = HCASH-tx
-BOOST_CHRONO_LIB = -lboost_chrono-mt
-BOOST_CPPFLAGS = -pthread -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../include
-BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt
-BOOST_LDFLAGS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../lib
-BOOST_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../lib -lboost_system-mt -lboost_filesystem-mt -lboost_program_options-mt -lboost_thread-mt -lboost_chrono-mt
-BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt
-BOOST_SYSTEM_LIB = -lboost_system-mt
-BOOST_THREAD_LIB = -lboost_thread-mt
+BOOST_CHRONO_LIB = -lboost_chrono-mt-s
+BOOST_CPPFLAGS = -mthreads -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include
+BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt-s
+BOOST_LDFLAGS = -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib
+BOOST_LIBS = -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib -lboost_system-mt-s -lboost_filesystem-mt-s -lboost_program_options-mt-s -lboost_thread_win32-mt-s -lboost_chrono-mt-s
+BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt-s
+BOOST_SYSTEM_LIB = -lboost_system-mt-s
+BOOST_THREAD_LIB = -lboost_thread_win32-mt-s
 BOOST_UNIT_TEST_FRAMEWORK_LIB = 
 BREW = 
 BUILD_QT = qt
 BUILD_TEST = 
 BUILD_TEST_QT = 
-CC = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/ccache gcc -m64
-CCACHE = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/ccache
+CC = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-gcc
+CCACHE = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/ccache
 CCDEPMODE = depmode=gcc3
 CFLAGS = -pipe -O2 
 CLIENT_VERSION_BUILD = 0
@@ -1361,32 +1361,32 @@ CLIENT_VERSION_MINOR = 0
 CLIENT_VERSION_REVISION = 1
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2017
-CPP = gcc -m64 -E
-CPPFILT = /usr/bin/c++filt
-CPPFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
-CRYPTO_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-CRYPTO_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lcrypto -ldl
-CXX = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/ccache g++ -m64 -std=c++11
-CXXCPP = g++ -m64 -std=c++11 -E
+CPP = i686-w64-mingw32-gcc -E
+CPPFILT = /usr/bin/i686-w64-mingw32-c++filt
+CPPFLAGS = -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
+CRYPTO_CFLAGS = 
+CRYPTO_LIBS = -lcrypto
+CXX = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/ccache i686-w64-mingw32-g++ -std=c++11
+CXXCPP = i686-w64-mingw32-g++ -std=c++11 -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all -fPIC -fvisibility=hidden
+CXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all -fvisibility=hidden
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = false
+DLLTOOL = i686-w64-mingw32-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
 EGREP = /bin/grep -E
-EVENT_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-EVENT_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -levent
-EVENT_PTHREADS_CFLAGS = -pthread -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-EVENT_PTHREADS_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -levent_pthreads -levent
-EXEEXT = 
+EVENT_CFLAGS = 
+EVENT_LIBS = -levent
+EVENT_PTHREADS_CFLAGS = 
+EVENT_PTHREADS_LIBS = 
+EXEEXT = .exe
 FGREP = /bin/grep -F
-GCOV = /usr/bin/gcov
+GCOV = /usr/bin/i686-w64-mingw32-gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
@@ -1403,38 +1403,38 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 JAVA = 
 JAVA_COMPARISON_TOOL = 
 LCOV = 
-LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../lib   -Wl,-z,relro -Wl,-z,now
+LD = /usr/bin/i686-w64-mingw32-ld
+LDFLAGS = -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib  -Wl,--large-address-aware  -Wl,--dynamicbase -Wl,--nxcompat
 LEVELDB_CPPFLAGS =  $(am__append_1)
-LEVELDB_TARGET_FLAGS = 
+LEVELDB_TARGET_FLAGS = TARGET_OS=OS_WINDOWS_CROSSCOMPILE
 LIBLEVELDB =  $(am__append_2)
 LIBMEMENV =  $(am__append_3)
 LIBOBJS = 
-LIBS = -lcrypto -lanl 
+LIBS = -lcrypto -lQt5PlatformSupport -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBTOOL_APP_LDFLAGS = 
+LIBTOOL_APP_LDFLAGS =  -all-static
 LIPO = 
 LN_S = ln -s
-LRELEASE = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/lrelease
+LRELEASE = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/lrelease
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = 
 MAINT = 
 MAKEINFO = ${SHELL} /home/acedcoin/buu/build-aux/missing makeinfo
-MAKENSIS = 
+MAKENSIS = none
 MANIFEST_TOOL = :
-MINIUPNPC_CPPFLAGS = 
+MINIUPNPC_CPPFLAGS = -DSTATICLIB -DMINIUPNP_STATICLIB
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
-MOC = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/moc
+MOC = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/moc
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
-NM = nm
+NM = i686-w64-mingw32-nm
 NMEDIT = 
-OBJCOPY = /usr/bin/objcopy
-OBJCXX = g++ -m64 -std=c++11
+OBJCOPY = /usr/bin/i686-w64-mingw32-objcopy
+OBJCXX = i686-w64-mingw32-g++ -std=c++11
 OBJCXXDEPMODE = depmode=gcc3
-OBJCXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all -fPIC
-OBJDUMP = objdump
+OBJCXXFLAGS = -pipe -O2   -Wstack-protector -fstack-protector-all
+OBJDUMP = i686-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -1447,59 +1447,59 @@ PACKAGE_URL =
 PACKAGE_VERSION = 2.0.1
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config --static
-PKG_CONFIG_LIBDIR = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../lib/pkgconfig
-PKG_CONFIG_PATH = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../share/pkgconfig
+PKG_CONFIG_LIBDIR = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib/pkgconfig
+PKG_CONFIG_PATH = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../share/pkgconfig
 PORT = 
-PROTOBUF_CFLAGS = -pthread -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-PROTOBUF_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lprotobuf -pthread -lpthread -lz
-PROTOC = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/protoc
-PTHREAD_CC = gcc -m64
+PROTOBUF_CFLAGS = 
+PROTOBUF_LIBS = -lprotobuf
+PROTOC = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/protoc
+PTHREAD_CC = i686-w64-mingw32-gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
 PYTHON = /usr/bin/python3
-PYTHONPATH = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/lib/python/dist-packages:
-QR_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-QR_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lqrencode -lpthread
-QTPLATFORM_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtPlatformSupport -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QTPLATFORM_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
+PYTHONPATH = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/lib/python/dist-packages:
+QR_CFLAGS = 
+QR_LIBS = -lqrencode
+QTPLATFORM_CFLAGS = 
+QTPLATFORM_LIBS = 
 QTPRINT_CFLAGS = 
 QTPRINT_LIBS = 
-QTXCBQPA_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtXcbQpa -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtPlatformSupport -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QTXCBQPA_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -L//home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5XcbQpa -lX11 -lX11-xcb -lxcb -lxcb-static -lQt5PlatformSupport -lQt5DBus -lfontconfig -lfreetype -lQt5Gui -lqtpng -lharfbuzz -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
-QT_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtNetwork -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtWidgets -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_DBUS_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtDBus -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_DBUS_INCLUDES = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtDBus -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_DBUS_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
-QT_INCLUDES = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtNetwork -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtWidgets -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtGui -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_LDFLAGS = 
-QT_LIBS = -lqxcb -lxcb-static -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -L//home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5XcbQpa -lX11 -lX11-xcb -lxcb -lxcb-static -lQt5PlatformSupport -lQt5DBus -lfontconfig -lfreetype -lQt5Gui -lqtpng -lharfbuzz -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lX11-xcb -lX11 -lpthread -lxcb -lXau -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5PlatformSupport -lQt5Gui -lqtpng -lharfbuzz -lQt5DBus -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lfontconfig -lfreetype -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5Network -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lz -lssl -lcrypto -lQt5Widgets -lQt5Gui -lqtpng -lharfbuzz -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lQt5Gui -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lqtpng -lharfbuzz -lz -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../plugins/platforms
+QTXCBQPA_CFLAGS = 
+QTXCBQPA_LIBS = 
+QT_CFLAGS = 
+QT_DBUS_CFLAGS = 
+QT_DBUS_INCLUDES = 
+QT_DBUS_LIBS = -lQt5DBus -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib
+QT_INCLUDES = -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/QtCore -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/QtGui -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/QtWidgets -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/QtNetwork -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/QtTest -I/home/acedcoin/buu/depends/i686-w64-mingw32/share/../include/QtDBus
+QT_LDFLAGS =  -mwindows
+QT_LIBS = -lqwindows -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../plugins/platforms
 QT_PIE_FLAGS = 
 QT_SELECT = qt5
-QT_TEST_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtTest -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_TEST_INCLUDES = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtTest -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/QtCore
-QT_TEST_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lQt5Test -lQt5Core -lz -lqtpcre -lm -ldl -lrt -lpthread -lQt5Core -lpthread -lz -lqtpcre -lm -ldl -lrt
-QT_TRANSLATION_DIR = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../translations
-RANLIB = ranlib
-RCC = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/rcc
-READELF = /usr/bin/readelf
+QT_TEST_CFLAGS = 
+QT_TEST_INCLUDES = 
+QT_TEST_LIBS = -lQt5Test -L/home/acedcoin/buu/depends/i686-w64-mingw32/share/../lib
+QT_TRANSLATION_DIR = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../translations
+RANLIB = /usr/bin/i686-w64-mingw32-ranlib
+RCC = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/rcc
+READELF = /usr/bin/i686-w64-mingw32-readelf
 RELDFLAGS = -Wl,--exclude-libs,ALL
 RSVG_CONVERT = 
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-SSL_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-SSL_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lssl -lcrypto -ldl
-STRIP = /usr/bin/strip
+SSL_CFLAGS = 
+SSL_LIBS = -lssl
+STRIP = /usr/bin/i686-w64-mingw32-strip
 TESTDEFS = 
 TIFFCP = 
-UIC = /home/acedcoin/buu/depends/x86_64-pc-linux-gnu/share/../native/bin/uic
+UIC = /home/acedcoin/buu/depends/i686-w64-mingw32/share/../native/bin/uic
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 2.0.1
-WINDOWS_BITS = 
-WINDRES = 
-X11XCB_CFLAGS = -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include/xcb-shared -I/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/include
-X11XCB_LIBS = -L/home/acedcoin/buu/depends/x86_64-pc-linux-gnu/lib -lX11-xcb -lX11 -lpthread -lxcb -lXau
+WINDOWS_BITS = 32
+WINDRES = /usr/bin/i686-w64-mingw32-windres
+X11XCB_CFLAGS = 
+X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = 
@@ -1530,11 +1530,11 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
-host_alias = x86_64-pc-linux-gnu
-host_cpu = x86_64
-host_os = linux-gnu
-host_vendor = pc
+host = i686-w64-mingw32
+host_alias = i686-w64-mingw32
+host_cpu = i686
+host_os = mingw32
+host_vendor = w64
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -8076,13 +8076,13 @@ qt/test/test_HCASH-qt.log: qt/test/test_HCASH-qt$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-#.test$(EXEEXT).log:
-#	@p='$<'; \
-#	$(am__set_b); \
-#	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
-#	--log-file $$b.log --trs-file $$b.trs \
-#	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
-#	"$$tst" $(AM_TESTS_FD_REDIRECT)
+.test$(EXEEXT).log:
+	@p='$<'; \
+	$(am__set_b); \
+	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 
 distdir: $(DISTFILES)
 	@srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*]/\\\\&/g'`; \
