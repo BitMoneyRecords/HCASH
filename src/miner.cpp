@@ -537,14 +537,14 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 continue;
             }
 
-            while (chainActive.Tip()->nTime < 1471482000 || vNodes.empty() || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() || pwallet->GetBalance() < 100 * COIN || !masternodeSync.IsSynced()) {
+            while (chainActive.Tip()->nTime < 1471482000 || vNodes.empty() || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() || pwallet->GetBalance() < 1 * COIN || !masternodeSync.IsSynced()) {
                 nLastCoinStakeSearchInterval = 0;
                 MilliSleep(5000);
                 if (!fGenerateBitcoins && !fProofOfStake)
                     continue;
             }
 
-			if(fProofOfStake && pwallet->GetBalance() < 100 * COIN) {
+			if(fProofOfStake && pwallet->GetBalance() < 1 * COIN) {
 				//LogPrintf("PoS and Balance is too low %d\n", pwallet->GetBalance());
 				MilliSleep(60000);
 				continue;
@@ -580,7 +580,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
         //Stake miner main
-        if (fProofOfStake && pwallet->GetBalance() >= 100 * COIN) {
+        if (fProofOfStake && pwallet->GetBalance() >= 1 * COIN) {
             LogPrintf("CPUMiner : proof-of-stake block found %s \n", pblock->GetHash().ToString().c_str());
 
             if (!pblock->SignBlock(*pwallet)) {
